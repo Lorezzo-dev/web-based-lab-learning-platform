@@ -1,5 +1,6 @@
-+++Web-Based Lab Learning Platform+++
-##Academic Context:
+## +++Web-Based Lab Learning Platform+++
+
+## Academic Context:
 
 This project was developed as part of the thesis:
 
