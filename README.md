@@ -27,25 +27,45 @@ It provides multiple interactive biology modules that simulate laboratory activi
 
 Features:
 🎮 Interactive Lab Simulations
+
 Phylogenetic Tree (drag-and-drop classification)
+
 Frog Dissection (interactive identification)
+
 Punnett Square (genetics simulation)
+
 Timeline Quiz (multi-step quiz system)
+
 📊 Automated Grading System
+
 Module-based scoring (lab and quiz components)
+
 Performance recording per user
+
 📈 Progress Tracking System
+
 Tracks completion of modules, labs, and quizzes
+
 🧑‍🏫 Instructor / Advisor Features
+
 Create and manage lectures
+
 Create and edit quizzes
+
 Monitor student performance and progress
+
 👤 User Roles
+
 Student (0)
+
 Teacher/Advisor (1)
+
 Admin (2)
+
 💾 Database & Data Handling
+
 MySQL for structured data (users, grades, progress)
+
 XML used for storing and managing dynamic content (e.g., announcements)
 
 Tech Stack:
