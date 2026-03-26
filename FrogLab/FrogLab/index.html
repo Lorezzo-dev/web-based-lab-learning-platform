@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <title>Dissection Laboratory Activity</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+
+        body {
+            background-image: url('Background.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            zoom: 100%;
+        }
+
+        .top-image {
+            margin-top: 20px;
+            width: 80%; /* Adjust percentage for desired size */
+            max-width: 800px; /* Optional: limit maximum size */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .drag-image {
+          width: 150px;
+          cursor: pointer;
+          position: absolute;
+          bottom: 15%; /* Use percentage for vertical positioning */
+          left: 80%;   /* Center horizontally */
+          transform: translateX(-50%); /* Center the image horizontally */
+        }
+
+        .drop-zone {
+            width: 300px;
+            height: 300px;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        #dropzcontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <img id="clickableImage" src="Sequence Images/Sequence 1.png" alt="Clickable Image" class="top-image">
+
+    <div id="container">
+        <div id="card">
+            <img id="dragImage" src="Frog.png" alt="Clickable Image" class="drag-image" draggable="true">
+        </div>
+    </div>
+
+    <div id="dropzcontainer">
+        <div class="drop-zone" id="dropZone">
+            Drop Here
+        </div>
+    </div>
+
+    <script>
+        const image = document.getElementById('clickableImage');
+        const images = ['Sequence Images/Sequence 1.png', 'Sequence Images/Sequence 2.png', 'Sequence Images/Sequence 3.png'];
+        let currentIndex = 0;
+        let clickCount = 0;
+
+        image.addEventListener('click', () => {
+            if (clickCount < 2) {
+                currentIndex = (currentIndex + 1) % images.length;
+                image.src = images[currentIndex];
+                clickCount++;
+            }
+        });
+
+        const draggableImage = document.getElementById('dragImage');
+        const dropZone = document.getElementById('dropZone');
+
+        // Allow the drop zone to accept the image
+        dropZone.addEventListener('dragover', (event) => {
+            event.preventDefault();
+        });
+
+        // Handle drop event and navigate to the next page
+        dropZone.addEventListener('drop', (event) => {
+            event.preventDefault();
+            window.location.href = 'FrogLab2.html'; // Navigate to the next page
+        });
+
+        // Make the image draggable
+        draggableImage.addEventListener('dragstart', (event) => {
+            event.dataTransfer.setData('text/plain', draggableImage.id);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Ensure full zoom
+            document.body.style.zoom = '1';
+
+            // Workaround for browsers that ignore 'zoom'
+            if (window.devicePixelRatio !== 1) {
+                const scale = 1 / window.devicePixelRatio;
+                const metaTag = document.createElement('meta');
+                metaTag.name = 'viewport';
+                metaTag.content = `width=device-width, initial-scale=${scale}, maximum-scale=${scale}, user-scalable=no`;
+                document.head.appendChild(metaTag);
+            }
+        });
+    </script>
+</body>
+</html>

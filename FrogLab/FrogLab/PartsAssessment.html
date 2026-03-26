@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <title>Dissection Laboratory Activity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+           font-family: 'Quicksand', sans-serif;
+            background-image: url('frogparts.png'); /* Set the background image */
+            background-size: cover; /* Make the image cover the entire viewport */
+            background-repeat: no-repeat; /* Prevent tiling/repeating of the image */
+            background-position: center; /* Center the image in the viewport */
+            height: 90vh; /* Ensure the body is at least 100% of the viewport height */
+            margin: 0; /* Remove any default margins */
+            display: flex; /* Use flexbox for alignment */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center horizontally */
+            justify-content: flex-start; /* Align items to the top */
+        }
+
+        .score {
+            margin: 20px; /* Add some margin */
+            font-size: 24px; /* Set font size for the score */
+            font-weight: bold; /* Make the score bold */
+            text-align: center; /* Center the text */
+        }
+
+        .lungs, .fats, .gallbladder, .smallintestine, .largeintestine, .liver, .stomach, .esophagus, .heart, .kidney {
+            position: absolute; /* Position relative to the body */
+            width: 80%; /* Set width of the text area container */
+            max-width: 600px; /* Limit maximum width */
+        }
+
+        .lungs { bottom: 550px; left: 260px; }
+        .fats { top: 50px; left: 870px; }
+        .gallbladder { bottom: 270px; left: 100px; }
+        .smallintestine { bottom: 370px; right: 320px; }
+        .largeintestine { bottom: 270px; right: 260px; }
+        .liver { bottom: 160px; left: 1800px; }
+        .stomach { bottom: 600px; left: 1500px; }
+        .esophagus { bottom: 780px; left: 1490px; }
+        .heart { bottom: 460px; left: 1000px; }
+        .kidney { bottom: 5px; left: 990px; }
+
+        textarea {
+            width: 30%; /* Set the width of the text area */
+            height: 40px; /* Set height for the text area */
+            padding: 10px; /* Add padding inside the text area */
+            font-size: 16px; /* Set font size */
+            border: 5px solid #ccc; /* Add border */
+            border-radius: 4px; /* Round the corners */
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+            resize: none; /* Prevent resizing of the text area */
+            margin-bottom: 10px; /* Add spacing between text areas */
+        }
+
+        button {
+          padding: 15px 30px;
+          background: #00796b;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 1.5em;
+          transition: background 0.3s ease;
+            position: absolute;
+            left: 40px;
+            top: 50px;
+        }
+
+        button:hover {
+            background: #004d40;
+        }
+
+        .completion-popup {
+            display: none;
+            position: fixed;
+            bottom: 50%;
+            left: 50%;
+           width: 30%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 40px 20px; /* Add extra padding for spacing */
+            border: 3px solid #00796b;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease;
+            text-align: center; /* Center-align the content */
+        }
+
+        .completion-popup h2 {
+            margin-bottom: 50px; /* Add space between the text and the button */
+        }
+
+        #exit-game-button {
+            padding: 15px 30px;
+            background: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.5em;
+            transition: background 0.3s ease;
+            margin-top: 40px; /* Add spacing above the button */
+            left: 37%
+        }
+
+        #exit-game-button:hover {
+            background: #004d40;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="score" id="scoreDisplay">Score: 0</div>
+
+    <div class="lungs">
+        <textarea placeholder="Enter your answer..."></textarea>
+    </div>
+    <div class="fats">
+        <textarea placeholder="Enter your answer..."></textarea>
+    </div>
+    <div class="gallbladder">
+        <textarea placeholder="Enter your answer..."></textarea>
+    </div>
+    <div class="smallintestine">
+        <textarea placeholder="Enter your answer..."></textarea>
+    </div>
+    <div class="largeintestine">
+        <textarea placeholder="Enter your answer..."></textarea>
+    </div>
+    <div class="liver">
+        <textarea placeholder="Enter your answer..."></textarea>
+    </div>
+    <div class="stomach">
+        <textarea placeholder="Enter your answer..."></textarea>
+    </div>
+    <div class="esophagus">
+        <textarea placeholder="Enter your answer..."></textarea>
+    </div>
+    <div class="heart">
+        <textarea placeholder="Enter your answer..."></textarea>
+    </div>
+    <div class="kidney">
+        <textarea placeholder="Enter your answer..."></textarea>
+    </div>
+
+    <button onclick="calculateScore()">Submit</button>
+
+    <div class="completion-popup" id="completion-popup">
+        <h2 id="completion-message">Lab Test Completed: (Calculated Score)</h2>
+        <button id="exit-game-button" onclick="exitGame()">Exit Lab</button>
+    </div>
+
+
+    <script>
+    let scoreCalculated = false; // Flag to track if the score has been calculated
+
+    function calculateScore() {
+        const correctAnswers = {
+            lungs: "Lungs",
+            fats: "Fat Bodies",
+            gallbladder: "Gall bladder",
+            smallintestine: "Small Intestine",
+            largeintestine: "Large Intestine",
+            liver: "Liver",
+            stomach: "Stomach",
+            esophagus: "Esophagus",
+            heart: "Heart",
+            kidney: "Kidney"
+        };
+
+        let score = 0;
+        const textareas = document.querySelectorAll('textarea');
+
+        textareas.forEach((textarea, index) => {
+            const answerKey = Object.keys(correctAnswers)[index];
+            if (textarea.value.trim().toLowerCase() === correctAnswers[answerKey].toLowerCase()) {
+                score++;
+                textarea.style.borderColor = 'green'; // Correct answer
+            } else {
+                textarea.style.borderColor = 'red'; // Incorrect answer
+            }
+        });
+
+        // Calculate percentage
+        const totalQuestions = Object.keys(correctAnswers).length;
+        const percentageScore = (score / totalQuestions) * 100;
+
+        // Update score display with percentage
+        document.getElementById('scoreDisplay').innerText = `Score: ${percentageScore}%`;
+
+        // Set completion message in the popup
+        const completionMessage = document.getElementById('completion-message');
+        completionMessage.innerText = `Lab Test Completed: ${percentageScore}%`;
+
+        scoreCalculated = true; // Set the flag to true after calculating the score
+
+        // Send percentageScore to the PHP file using AJAX
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "updateGradePA.php", true); // Replace with your PHP file's name
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        // Handle response from the server
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                console.log("Response from server: ", xhr.responseText);
+            } else {
+                console.error("Failed to update grade: ", xhr.statusText);
+            }
+        };
+
+        // Send the percentageScore as POST data
+        xhr.send(`percentage=${percentageScore}`);
+    }
+
+
+
+    // Event listener for showing the popup when the screen is clicked
+    document.addEventListener('click', () => {
+        if (scoreCalculated) {
+            const popup = document.getElementById('completion-popup');
+            popup.style.display = 'block';
+        }
+    });
+
+    // Function to exit the game
+    function exitGame() {
+      window.close(); // Close the window // Replace with the desired page
+    }
+    </script>
+</body>
+</html>

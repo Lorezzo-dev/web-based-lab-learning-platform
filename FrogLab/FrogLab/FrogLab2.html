@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <title>Dissection Laboratory Activity</title>
+    <style>
+        body {
+            background-image: url('FDPage.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .top-image {
+          margin-top: 20px;
+          width: 80%; /* Adjust percentage for desired size */
+          max-width: 800px; /* Optional: limit maximum size */
+          height: auto; /* Maintain aspect ratio */
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .frogbody {
+            width: 700px;
+            height: auto;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .scalpel {
+            width: 50px;
+            height: auto;
+            position: absolute;
+            top: 250px;
+            right: 300px;
+            z-index: 10; /* Higher than all other elements */
+            cursor: grab;
+        }
+
+        .stomach {
+            width: 345px;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 1165px;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            transition: opacity 0.5s ease; /* Smooth fade-out effect */
+        }
+
+        .intestine {
+            width: 230px;
+            height: auto;
+            position: absolute;
+            top: 45%;
+            left: 48%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            opacity: 0;
+            display: none;
+        }
+
+        .heartarteries {
+            width: 400px;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 4;
+            opacity: 0;
+            display: none;
+        }
+
+        .kidney {
+            width: 100px;
+            height: auto;
+            position: absolute;
+            top: 39%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 8;
+            opacity: 0;
+            display: none;
+        }
+
+        .lungs {
+            width: 150px;
+            height: auto;
+            position: absolute;
+            top: 29%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            opacity: 0;
+            display: none;
+        }
+
+        .fats {
+            width: 180px;
+            height: auto;
+            position: absolute;
+            top: 33%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 6;
+            opacity: 0;
+            display: none;
+        }
+
+        .galbladder {
+            width: 30px;
+            height: auto;
+            position: absolute;
+            top: 40%;
+            left: 47%;
+            transform: translate(-50%, -50%);
+            z-index: 7;
+            opacity: 0;
+            display: none;
+        }
+
+        .liver {
+            width: 150px;
+            height: auto;
+            position: absolute;
+            top: 29%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 8; /* Higher than gallbladder */
+            opacity: 0;
+            display: none;
+        }
+
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* New styles for the bottom right image */
+        .bottom-right-image {
+            position: absolute;
+            bottom: -100px; /* Adjust as needed */
+            left: -150px; /* Adjust as needed */
+            width: 500spx; /* Set the desired width */
+            height: auto; /* Maintain aspect ratio */
+            z-index: 5; /* Ensure it's below the scalpel and other elements */
+        }
+    </style>
+</head>
+<body>
+    <div class ="image-container">
+        <img id="clickableImage" src="FD Sequence Images/Sequence 1.png" alt="Clickable Image" class="top-image">
+        <img src="Empty frog stomach.png" alt="Frog for Dissection" class="frogbody" id="frog">
+        <img src="stomach.png" alt="Frog's stomach" class="stomach" id="stomach">
+        <img src="intestine.png" alt="Frog's intestine" class="intestine" id="intestine">
+        <img src="Frog Arteries.png" alt="Heart Arteries" class="heartarteries" id="heartarteries">
+        <img src="kidney.png" alt="Frog's kidney" class="kidney" id="kidney">
+        <img src="Lungs.png" alt="Lungs" class="lungs" id="lungs">
+        <img src="fats.png" alt="Fats" class="fats" id="fats">
+        <img src="gal bladder.png" alt="Gallbladder" class="galbladder" id="galbladder">
+        <img src="liver.png" alt="Liver" class="liver" id="liver">
+        <img src="scalpel.png" alt="Scalpel for Dissection" class="scalpel" draggable="true" id="scalpel">
+        <img src="bottom right image.png" alt="Bottom Right Image" class="bottom-right-image"> <!-- New image added -->
+    </div>
+
+    <script>
+        const scalpel = document.getElementById('scalpel');
+        const stomach = document.getElementById('stomach');
+        const frog = document.getElementById('frog');
+        const heartArteries = document.getElementById('heartarteries');
+        const lungs = document.getElementById('lungs');
+        const fats = document.getElementById('fats');
+        const gallbladder = document.getElementById('galbladder');
+        const liver = document.getElementById('liver');
+        const kidney = document.getElementById('kidney');
+        const intestine = document.getElementById('intestine');
+
+        scalpel.addEventListener('mousedown', (e) => {
+            const rect = scalpel.getBoundingClientRect();
+            const offsetX = e.clientX - rect.left;
+            const offsetY = e.clientY - rect.top;
+
+            const onMouseMove = (event) => {
+                scalpel.style.left = `${event.clientX - offsetX}px`;
+                scalpel.style.top = `${event.clientY - offsetY}px`;
+                scalpel.style.position = 'absolute';
+            };
+
+            const onMouseUp = () => {
+    const scalpelRect = scalpel.getBoundingClientRect();
+    const stomachRect = stomach.getBoundingClientRect();
+
+    if (
+        scalpelRect.left < stomachRect.right &&
+        scalpelRect.right > stomachRect.left &&
+        scalpelRect.top < stomachRect.bottom &&
+        scalpelRect.bottom > stomachRect.top
+    ) {
+        scalpel.style.display = 'none'; // Remove the scalpel
+        stomach.classList.add('hidden');
+        heartArteries.style.opacity = 1;
+        lungs.style.opacity = 1;
+        fats.style.opacity = 1;
+        gallbladder.style.opacity = 1;
+        liver.style.opacity = 1;
+        kidney.style.opacity = 1;
+        intestine.style.opacity = 1;
+        frog.src = 'Frog2.png';
+
+        // Change cursor to custom image
+        document.body.style.cursor = 'url("mouse cursor 62.png"), auto';
+
+        makeDraggable(heartArteries);
+        makeDraggable(lungs);
+        makeDraggable(fats);
+        makeDraggable(gallbladder);
+        makeDraggable(liver);
+        makeDraggable(kidney);
+        makeDraggable(intestine);
+
+        // Redirect to the next page
+        setTimeout(() => {
+            window.location.href = 'FrogLab2 copy.html'; // Change 'nextPage.html' to your actual next page URL
+        }, 1000); // Optional delay before redirecting
+    }
+
+    document.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('mouseup', onMouseUp);
+};
+
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
+        });
+
+        function makeDraggable(element) {
+            element.style.position = 'absolute';
+            element.addEventListener('mousedown', (e) => {
+                const rect = element.getBoundingClientRect();
+                const offsetX = e.clientX - rect.left - rect.width / 2;
+                const offsetY = e.clientY - rect.top - rect.height / 2;
+
+                const onMouseMove = (event) => {
+                    element.style.left = `${event.clientX - rect.width / 2}px`;
+                    element.style.top = `${event.clientY - rect.height / 2}px`;
+                };
+
+                const onMouseUp = () => {
+                    document.removeEventListener('mousemove', onMouseMove);
+                    document.removeEventListener('mouseup', onMouseUp);
+                };
+
+                document.addEventListener('mousemove', onMouseMove);
+                document.addEventListener('mouseup', onMouseUp);
+            });
+        }
+    </script>
+
+</body>
+</html>`

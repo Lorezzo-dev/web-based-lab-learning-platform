@@ -1,0 +1,13 @@
+<quiz>
+<title>New Quiz</title>
+<timer>300</timer>
+    <question>
+        <text>Write Question Here</text>
+        <option id="a">Option A</option>
+        <option id="b">Option B</option>
+        <option id="c">Option C</option>
+        <option id="d">Option D</option>
+        <correct>write just: a,b,c,d (must be lower cases)...</correct>
+    </question>
+
+</quiz>

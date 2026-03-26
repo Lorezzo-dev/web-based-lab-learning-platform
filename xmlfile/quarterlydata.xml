@@ -1,0 +1,261 @@
+<!-- quiz1_data.xml -->
+<quiz>
+  <title>Quarterly Assessment</title>
+  <timer>800</timer>
+
+  <!-- Question 1 to 20 -->
+  <question>
+    <text>The type of reproduction in which an animal divides into several pieces and then each piece develops into an entire new animal is called:</text>
+    <option id="a">Hermaphroditic</option>
+    <option id="b">Sterile</option>
+    <option id="c">Fragmentation</option>
+    <option id="d">Metagenesis</option>
+    <correct>c</correct>
+  </question>
+  <question>
+    <text>When blood glucose is too low, the pancreas secretes:</text>
+    <option id="a">Glucagon</option>
+    <option id="b">Insulin</option>
+    <option id="c">Glycogen</option>
+    <option id="d">Glucose</option>
+    <correct>a</correct>
+  </question>
+  <question>
+    <text>In metagenesis there is an alternation of:</text>
+    <option id="a">Gamete; zygote</option>
+    <option id="b">Sexual and asexual generations</option>
+    <option id="c">Pollination and fertilization</option>
+    <option id="d">Genetic combinations</option>
+    <correct>b</correct>
+  </question>
+  <question>
+    <text>The production of ____________________________ by the seed plants largely circumvents the requirement found in ferns, mosses, and the like for _________________________ as a requirement for fertilization.</text>
+    <option id="a">Scion; stock</option>
+    <option id="b">Gamete; zygote</option>
+    <option id="c">Pollen; water</option>
+    <option id="d">Ovule; pollen tube</option>
+    <correct>c</correct>
+  </question>
+  <question>
+    <text>When blood glucose is too high, the pancreas secretes:</text>
+    <option id="a">Glucagon</option>
+    <option id="b">Insulin</option>
+    <option id="c">Glycogen</option>
+    <option id="d">Glucose</option>
+    <correct>b</correct>
+  </question>
+
+  <!-- Question 6 to 10 -->
+  <question>
+    <text>Which of the following statements correctly describes non-Mendelian genetics?</text>
+    <option id="a">Non-Mendelian genetics follows all the laws of Mendelian genetics.</option>
+    <option id="b">Non-Mendelian genetics only applies to plants and not to animals.</option>
+    <option id="c">Non-Mendelian genetics involves inheritance patterns that do not follow one or more laws of Mendelian genetics.</option>
+    <option id="d">Non-Mendelian genetics cannot be used to understand any patterns of inheritance.</option>
+    <correct>c</correct>
+  </question>
+  <question>
+    <text>In the case of codominance, as illustrated by the red (R) and white (W) flowers, which of the following statements is true?</text>
+    <option id="a">Codominant alleles for red petals and white petals result in flowers that are entirely red or entirely white</option>
+    <option id="b">Codominance occurs when both alleles are expressed equally in the phenotype of the heterozygote, resulting in flowers with both red and white petals.</option>
+    <option id="c">Codominance occurs when one allele completely masks the other.</option>
+    <option id="d">Codominance leads to a blend of the two traits, resulting in pink flowers.</option>
+    <correct>b</correct>
+  </question>
+  <question>
+    <text>The information gained from pedigree analysis allows for determining the nature of genes and alleles associated with inherited human traits. Based on the provided text, answer the following question: Which of the following statements is true regarding sex-linked traits?</text>
+    <option id="a">An X-linked trait can be passed from father to son.</option>
+    <option id="b">A Y-linked trait can affect females.</option>
+    <option id="c">An X-linked trait can NEVER be passed from father to son.</option>
+    <option id="d">A Y-linked trait affects both males and females equally.</option>
+    <correct>c</correct>
+  </question>
+  <question>
+    <text>Which of the following statements correctly describes the base pairings in DNA?</text>
+    <option id="a">Adenine (A) pairs with uracil (U), and guanine (G) pairs with cytosine (C).</option>
+    <option id="b">Adenine (A) pairs with thymine (T), and guanine (G) pairs with cytosine (C).</option>
+    <option id="c">Adenine (A) pairs with cytosine (C), and guanine (G) pairs with thymine (T).</option>
+    <option id="d">Adenine (A) pairs with thymine (T), and guanine (G) pairs with uracil (U).</option>
+    <correct>b</correct>
+  </question>
+  <question>
+    <text>Which of the following best describes the process of gene cloning?</text>
+    <option id="a">Isolating a gene of interest and inserting it directly into a human cell.</option>
+    <option id="b">Using a virus to transfer genetic material into an organism.</option>
+    <option id="c">Isolating a gene of interest, inserting it into a plasmid, cloning the gene in bacteria, and harvesting the gene from the culture.</option>
+    <option id="d">Directly observing the gene expression in multicellular organisms.</option>
+    <correct>c</correct>
+  </question>
+  <question>
+    <text>Which of the following best describes biogeography as evidence for evolution?</text>
+    <option id="a">The study of how organisms are distributed globally and how island species reflect evolution and geological change.</option>
+    <option id="b">The analysis of fossils to understand the distribution of extinct species.</option>
+    <option id="c">The comparison of DNA sequences to show relationships among species.</option>
+    <option id="d">The observation of small-scale evolution in organisms with short life cycles.</option>
+    <correct>a</correct>
+  </question>
+  <question>
+    <text>Which of the following statements about homologous structures is correct?</text>
+    <option id="a">Which of the following statements about homologous structures is correct?</option>
+    <option id="b">Homologous structures are similar in related organisms because they were inherited from a common ancestor.</option>
+    <option id="c">Homologous structures have reduced in size due to evolution and are no longer used.</option>
+    <option id="d">Homologous structures are unrelated to common ancestry and arise from direct observation.</option>
+    <correct>b</correct>
+  </question>
+
+  <!-- Question 11 to 20 -->
+  <question>
+    <text>Which of the following best describes the fossil record as evidence for evolution?</text>
+    <option id="a">It provides information about the global distribution of organisms.</option>
+    <option id="b">It documents the existence of now-extinct past species that are related to present species and allows dating for a timestamp that shows species distribution at certain periods in our planet's history.</option>
+    <option id="c">It shows the physical similarities between species that were present in a common ancestor.</option>
+    <option id="d">It involves the comparison of DNA sequences to show relationships among species.</option>
+    <correct>b</correct>
+  </question>
+  <question>
+    <text>Which of the following best describes analogous structures?</text>
+    <option id="a">Similar structures in related organisms inherited from a common ancestor.</option>
+    <option id="b">Similar structures in unrelated organisms that evolved to do the same job, not because they were inherited from a common ancestor.</option>
+    <option id="c">Structures that have reduced in size due to evolution and are no longer used.</option>
+    <option id="d">Structures that provide direct evidence for small-scale evolution in organisms.</option>
+    <correct>b</correct>
+  </question>
+  <question>
+    <text>What is the significance of molecular biology in providing evidence for evolution?</text>
+    <option id="a">It studies the global distribution of organisms and island species.</option>
+    <option id="b">It documents the existence of now-extinct species through the fossil record.</option>
+    <option id="c">It involves comparing DNA sequences to show relationships among species, such as transcription and translation.</option>
+    <option id="d">It observes small-scale evolution in organisms with short life cycles.</option>
+    <correct>c</correct>
+  </question>
+  <question>
+    <text>What is the main difference between the Bacteria and Archaea domains?</text>
+    <option id="a">Bacteria are multicellular while Archaea are unicellular.</option>
+    <option id="b">Bacteria have cell walls with peptidoglycan, whereas Archaea do not.</option>
+    <option id="c">Bacteria reproduce sexually while Archaea reproduce asexually.</option>
+    <option id="d">Bacteria and Archaea are identical in structure.</option>
+    <correct>b</correct>
+  </question>
+
+  <!-- Continue to next section for question 21 to 40 -->
+  <question>
+    <text>What is the primary function of the digestive system in animals?</text>
+    <option id="a">To transport oxygen throughout the body</option>
+    <option id="b">To break down food into smaller molecules for absorption</option>
+    <option id="c">To facilitate gas exchange</option>
+    <option id="d">To regulate hormones</option>
+    <correct>b</correct>
+  </question>
+  <question>
+    <text>Which system is responsible for transporting oxygen and nutrients in animals?</text>
+    <option id="a">Digestive system</option>
+    <option id="b">Circulatory system</option>
+    <option id="c">Respiratory system</option>
+    <option id="d">Endocrine system</option>
+    <correct>b</correct>
+  </question>
+  <question>
+    <text>What is the role of the respiratory system in animals?</text>
+    <option id="a">To eliminate waste products</option>
+    <option id="b">To transport blood</option>
+    <option id="c">To exchange gases like oxygen and carbon dioxide</option>
+    <option id="d">To regulate blood sugar levels</option>
+    <correct>c</correct>
+  </question>
+  <question>
+    <text>In plants, what is the main function of the root system?</text>
+    <option id="a">To support the plant structure</option>
+    <option id="b">To absorb water and minerals</option>
+    <option id="c">To produce flowers</option>
+    <option id="d">To carry out photosynthesis</option>
+    <correct>b</correct>
+  </question>
+  <question>
+    <text>What are the two main tissues in the vascular system of plants responsible for transport?</text>
+    <option id="a">Xylem and phloem</option>
+    <option id="b">Roots and stems</option>
+    <option id="c">Leaves and flowers</option>
+    <option id="d">Fruit and seeds</option>
+    <correct>a</correct>
+  </question>
+  <question>
+    <text>Who is known as the 'Father of Genetics'?</text>
+    <option id="a">Charles Darwin</option>
+    <option id="b">Gregor Mendel</option>
+    <option id="c">James Watson</option>
+    <option id="d">Francis Crick</option>
+    <correct>b</correct>
+  </question>
+  <question>
+    <text>According to Mendel's Law of Segregation, how many alleles does each individual have for each trait?</text>
+    <option id="a">One</option>
+    <option id="b">Two</option>
+    <option id="c">Three</option>
+    <option id="d">Four</option>
+    <correct>b</correct>
+  </question>
+  <question>
+    <text>Which of the following is an example of an X-linked disorder?</text>
+    <option id="a">Cystic fibrosis</option>
+    <option id="b">Color blindness</option>
+    <option id="c">Sickle cell anemia</option>
+    <option id="d">Down syndrome</option>
+    <correct>b</correct>
+  </question>
+  <question>
+    <text>What is the first step in the Central Dogma of Molecular Biology?</text>
+    <option id="a">Translation</option>
+    <option id="b">Replication</option>
+    <option id="c">Transcription</option>
+    <option id="d">Mutation</option>
+    <correct>c</correct>
+  </question>
+  <question>
+    <text>In recombinant DNA technology, what is the role of a vector?</text>
+    <option id="a">To isolate the desired gene</option>
+    <option id="b">To express the protein</option>
+    <option id="c">To insert the gene into host cells</option>
+    <option id="d">To analyze genetic information</option>
+    <correct>c</correct>
+  </question>
+  <question>
+    <text>Why is evolution considered fundamental to understanding biodiversity?</text>
+    <option id="a">It provides insight into climate change.</option>
+    <option id="b">It explains how organisms adapt to changing environments.</option>
+    <option id="c">It eliminates the need for conservation.</option>
+    <option id="d">It focuses solely on fossil evidence.</option>
+    <correct>b</correct>
+  </question>
+  <question>
+    <text>Which mechanism of evolution introduces new genetic variations by altering the DNA sequence?</text>
+    <option id="a">Natural selection</option>
+    <option id="b">Gene flow</option>
+    <option id="c">Mutation</option>
+    <option id="d">Genetic drift</option>
+    <correct>c</correct>
+  </question>
+  <question>
+    <text>What type of evidence provides timestamps for understanding how species have evolved over time?</text>
+    <option id="a">Comparative anatomy</option>
+    <option id="b">Molecular biology</option>
+    <option id="c">Fossil record</option>
+    <option id="d">Biogeography</option>
+    <correct>c</correct>
+  </question>
+  <question>
+    <text>According to Darwin's Theory of Natural Selection, what happens to individuals with traits that offer a survival advantage?</text>
+    <option id="a">They are less likely to reproduce.</option>
+    <option id="b">They are more likely to survive and reproduce.</option>
+    <option id="c">They become extinct.</option>
+    <option id="d">They do not influence evolution.</option>
+    <correct>b</correct>
+  </question>
+  <question>
+    <text>What is the Modern Synthesis?</text>
+    <option id="a">A combination of natural selection and genetic inheritance.</option>
+    <option id="b">A theory proposed by Lamarck.</option>
+    <option id="c">A theory that only focuses on fossils.</option>
+    <option id="d">A concept that rejects genetics in evolution.</option>
+    <correct>a</correct>
+  </question>
+</quiz>

@@ -1,0 +1,44 @@
+<quiz>
+<title>Systematics based on Evolutionary Relationships</title>
+<timer>300</timer>
+    <question>
+        <text>What is the main difference between the Bacteria and Archaea domains?</text>
+        <option id="a">Bacteria are multicellular while Archaea are unicellular.</option>
+        <option id="b">Bacteria have cell walls with peptidoglycan, whereas Archaea have cell walls without peptidoglycan.</option>
+        <option id="c">Bacteria are eukaryotic while Archaea are prokaryotic.</option>
+        <option id="d">Bacteria can photosynthesize while Archaea cannot.</option>
+        <correct>b</correct>
+    </question>
+    <question>
+        <text>If an organism is a multicellular autotroph and has a cell wall, to which kingdom does it belong?</text>
+        <option id="a">Protista</option>
+        <option id="b">Fungi</option>
+        <option id="c">Plantae</option>
+        <option id="d">Animalia</option>
+        <correct>c</correct>
+    </question>
+    <question>
+        <text>You learned that a unicellular organism has chloroplasts and a nucleus. To which kingdom does it belong?</text>
+        <option id="a">Bacteria</option>
+        <option id="b">Archaea</option>
+        <option id="c">Protista</option>
+        <option id="d">Fungi</option>
+        <correct>c</correct>
+    </question>
+    <question>
+        <text>Which of the following kingdoms consists primarily of multicellular heterotrophs with no cell walls or chloroplasts?</text>
+        <option id="a">Protista</option>
+        <option id="b">Fungi</option>
+        <option id="c">Plantae</option>
+        <option id="d">Animalia</option>
+        <correct>d</correct>
+    </question>
+    <question>
+        <text>Which of the following is an example of an organism from the Eubacteria domain?</text>
+        <option id="a">Methanogens</option>
+        <option id="b">Amoeba</option>
+        <option id="c">Mushrooms</option>
+        <option id="d">Escherichia coli</option>
+        <correct>d</correct>
+    </question>
+</quiz>
