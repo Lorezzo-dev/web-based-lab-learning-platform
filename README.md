@@ -119,8 +119,8 @@ A built-in CMS enabling instructors to dynamically create and manage learning co
 1. Install XAMPP (or similar PHP/MySQL environment)  
 2. Place project folder 
    htdocs/your-project-folder
-4. Start Apache and MySQL  
-5. Import database via phpMyAdmin:
+3. Start Apache and MySQL  
+4. Import database via phpMyAdmin:
 
 - Create database (e.g., `thesislab`)
 - Import `thesislab.sql`
@@ -148,10 +148,10 @@ A built-in CMS enabling instructors to dynamically create and manage learning co
 ### 🧪 Interactive Lab Modules
 5. Lab Simulation
 <img width="1920" height="1080" alt="FrogLab" src="https://github.com/user-attachments/assets/9a3ad12b-f6cf-4ed6-ad46-ec0bc391d581" />
-<br/>
+<br/><br/><br/><br/><br/>
 <img width="1433" height="495" alt="punnett_collage_final" src="https://github.com/user-attachments/assets/00e66886-2a57-4cc9-b7fa-dbd8140cbc46" />
 > Demonstrates dynamic genotype combinations and real-time phenotype probability updates across different genetic scenarios.
-<br/>
+<br/><br/><br/><br/><br/>
 <img width="1920" height="1080" alt="PhylogeneticTree" src="https://github.com/user-attachments/assets/4b32deb2-3a1d-479c-a937-7c9e81e85487" />
 > These modules simulate real laboratory activities through interactive user input and automated evaluation logic.
 
