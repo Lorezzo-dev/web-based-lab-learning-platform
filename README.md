@@ -1,98 +1,181 @@
-# Web-Based Lab Learning Platform
+### 🚀 Web-Based Lab Learning Platform
 
-A full-stack educational platform designed to simulate laboratory activities through interactive modules, automated evaluation, and real-time progress tracking.
+A full-stack **Learning Management System (LMS) with integrated interactive laboratory simulations**, designed to deliver structured content, automated evaluation, and real-time student analytics.
 
-This system was developed and deployed as part of a published IEEE research study evaluating gamified web-based laboratory learning in a real classroom environment.
+
+Developed and deployed as part of a **published IEEE research study**, this platform was used in a real classroom environment to evaluate the effectiveness of gamified digital laboratory learning.
 
 ---
 
-## 🧠 Research Context
+## 🧠 Research Background
 
-This platform was used in a study published under :contentReference[oaicite:0]{index=0}:
-
-"Science Education in Public Upper Secondary Schools: Utilizing the Web-Based Lab as an Interactive Learning Tool"
+**"Science Education in Public Upper Secondary Schools: Utilizing the Web-Based Lab as an Interactive Learning Tool"**
 
 🔗 https://ieeexplore.ieee.org/abstract/document/11380788
 
-The system was utilized with real student participants to compare digital laboratory simulations with traditional laboratory instruction, measuring engagement, performance, and learning outcomes.
+The platform was used with real student participants to compare:
+
+- Traditional laboratory instruction  
+- Interactive web-based simulations  
+
+Metrics evaluated:
+
+- Student engagement  
+- Performance outcomes  
+- Learning effectiveness  
 
 ---
 
-## 🧠 My Contribution
+## 🧑‍💻 My Role & Contribution
 
-- Led development of ~95% of the system
-- Designed and implemented interactive lab modules (drag-and-drop, simulations, quizzes)
-- Built backend logic for grading, scoring, and progress tracking
-- Designed relational database for experimental data collection
-- Integrated frontend interactions with backend evaluation systems
+- Developed ~95% of the system (frontend + backend)
+- Designed and implemented **interactive lab modules**
+- Built **automated grading and evaluation logic**
+- Engineered **progress tracking and analytics system**
+- Designed relational database for structured data collection
+- Integrated dynamic frontend interactions with backend processing
 
 ---
 
-## ⚡ Core Features
+## ⚡ Key Features
 
-### 🎮 Interactive Lab Simulations
-- Phylogenetic Tree (drag-and-drop classification)
-- Frog Dissection (interactive identification)
-- Punnett Square (genetics simulation)
-- Timeline Quiz (multi-step quiz system)
+### 🎮 Interactive Laboratory Modules
 
-### 📊 Automated Evaluation System
-- Module-based grading (labs + quizzes)
-- Real-time scoring and performance tracking
-- Structured recording of student results
+- **Phylogenetic Tree** – drag-and-drop classification system  
+- **Frog Dissection** – interactive identification interface  
+- **Punnett Square** – genetics simulation  
+- **Timeline Quiz** – multi-step assessment flow  
 
-### 📈 Progress Tracking
-- Tracks completion across modules and activities
-- Stores individual performance data per user
+---
 
-### 🧑‍🏫 Instructor / Admin Tools
-- Create and manage lectures
-- Create and edit quizzes
-- Monitor student performance and engagement
+### 🧩 Content Management System (CMS)
 
-### 👤 Role-Based Access
-- Student
-- Teacher / Advisor
-- Admin
+A built-in CMS enabling instructors to dynamically create and manage learning content:
+
+- Create structured lectures (topics, sections, paragraphs)
+- Attach videos and descriptions
+- Build quizzes with multiple questions and answer validation
+- Dynamically update modules without code changes
+
+---
+
+### 🧪 Interactive Quiz Engine
+
+- Timed quizzes with multiple questions  
+- Per-question scoring system  
+- Automated grading and submission handling  
+- Integrated directly with lecture content  
+
+---
+
+### 📊 Analytics & Performance Dashboard
+
+- Tracks student progress across modules  
+- Displays completion status:
+  - Complete  
+  - In Progress  
+  - Not Started  
+- Aggregates quiz and lab scores  
+- Provides instructors with performance insights  
+
+---
+
+### 📈 Automated Evaluation System
+
+- Module-based grading (labs + quizzes)  
+- Real-time score computation  
+- Persistent storage of student results  
+- Final grading with remarks (e.g., Pass/Fail)  
+
+---
+
+### 👥 Role-Based Access Control
+
+- **Student** – access modules, complete labs, take quizzes  
+- **Teacher / Advisor** – monitor progress, manage content, view grades  
+- **Admin** – manage users, modules, and system-wide configuration  
+
+---
+
+### 💬 Messaging System
+
+- Internal messaging between students and instructors  
+- Inbox-based communication system  
+- Role-aware message visibility  
 
 ---
 
 ## 🏗️ System Architecture
 
-- Backend: PHP-based application logic
-- Database: MySQL (users, grades, progress tracking)
-- Frontend: HTML, CSS, JavaScript
-- Data Handling: XML for dynamic content (e.g., announcements)
+- **Backend:** PHP (application logic, evaluation engine)  
+- **Database:** MySQL (users, grades, progress tracking)  
+- **Frontend:** HTML, CSS, JavaScript  
+- **Content Storage:** XML (dynamic structured content)  
 
 ---
 
-## ⚙️ Setup (Local Development)
+## ⚙️ Local Setup
 
-1. Install XAMPP or similar PHP/MySQL environment  
-2. Place project in `htdocs/`  
-3. Start Apache and MySQL  
-4. Import database via phpMyAdmin (`thesislab.sql`)  
-5. Run:
-   http://localhost/your-folder/login.php  
+1. Install XAMPP (or similar PHP/MySQL environment)  
+2. Place project folder 
+   htdocs/your-project-folder
+4. Start Apache and MySQL  
+5. Import database via phpMyAdmin:
+
+- Create database (e.g., `thesislab`)
+- Import `thesislab.sql`
+
+5. Run in browser:
+   http://localhost/your-project-folder/login.php
+---
+
+## 📸 Screenshots
+
+### 🧩 Content Management (Instructor Side)
+1. Admin CMS – Create Lecture Content  
+<img width="1920" height="1080" alt="Admin Create Lecture" src="https://github.com/user-attachments/assets/f8e643f7-256f-4a72-90b3-5df0f2733f82" />
+2. Admin CMS – Create Quiz
+<img width="1920" height="1080" alt="Add Quiz" src="https://github.com/user-attachments/assets/3023e6f7-e0d3-4c14-a385-2e1703e0ee5e" />
+
+
+### 📚 Learning Experience (Student Side)
+3. Rendered Lecture Page
+<img width="1920" height="1080" alt="RenderedLecturePage" src="https://github.com/user-attachments/assets/e5d12729-1811-4246-a320-ba834cff6f3f" />
+
+4. Interactive Quiz System  
+<img width="1920" height="1080" alt="Interactive Quiz" src="https://github.com/user-attachments/assets/83a2af1a-a8a5-4449-b148-1e5770a1ce2c" />
+
+### 🧪 Interactive Lab Modules
+5. Lab Simulation
+<img width="1920" height="1080" alt="FrogLab" src="https://github.com/user-attachments/assets/9a3ad12b-f6cf-4ed6-ad46-ec0bc391d581" />
+<br/>
+<img width="1433" height="495" alt="punnett_collage_final" src="https://github.com/user-attachments/assets/00e66886-2a57-4cc9-b7fa-dbd8140cbc46" />
+> Demonstrates dynamic genotype combinations and real-time phenotype probability updates across different genetic scenarios.
+<br/>
+<img width="1920" height="1080" alt="PhylogeneticTree" src="https://github.com/user-attachments/assets/4b32deb2-3a1d-479c-a937-7c9e81e85487" />
+> These modules simulate real laboratory activities through interactive user input and automated evaluation logic.
+
+### 📊 Analytics & Monitoring
+6. Student Dashboard
+<img width="1920" height="1080" alt="StudentDashboard" src="https://github.com/user-attachments/assets/9c4a6468-aa64-48e6-a1e9-7db9c4376ed1" />
+> Demonstrates real-time grading logic, including partial completion, failed modules, and automated final grade computation.
+7. Teacher Dashboard
+<img width="1920" height="1080" alt="TeacherDashboard" src="https://github.com/user-attachments/assets/533ac72e-ecec-467d-8b51-6d9e3762cfd1" />
 
 ---
 
-## ⚠️ Notes
+## ⚠️ Implementation Notes
 
-- Originally deployed in a controlled environment for research experimentation
-- Some UI elements may vary slightly across environments (local vs hosted)
-- Core functionality remains unaffected
+- Originally deployed in a controlled research environment  
+- Optimized for classroom testing and experimentation  
+- Minor UI differences may appear across environments (local vs hosted)  
+- Core system functionality remains consistent  
 
 ---
 
 ## 🔐 Data & Privacy
 
-- Database included is fully sanitized  
-- No real student or experimental data is included  
-- All sensitive information has been removed for compliance  
+- Repository includes **sanitized database only**  
+- All student data and experimental records have been removed  
+- Complies with privacy and research data handling standards  
 
----
-
-## 📸 Screenshots
-
-*(Add 4–6 screenshots here: modules, dashboard, admin panel, quiz, etc.)*
