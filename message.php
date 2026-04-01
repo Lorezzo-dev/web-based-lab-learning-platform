@@ -111,12 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["action"]) && $_POST["
     exit();
 }
 
-foreach ($messages as $index => $message) {
-    echo "<div class='message-item'>";
-    echo "<strong>Subject:</strong> " . htmlspecialchars($message['subject']) . "<br>";
-    echo "<button class='view-btn' data-id='$index'>View</button>";
-    echo "</div>";
-}
+
 
 
 ?>
@@ -140,7 +135,7 @@ foreach ($messages as $index => $message) {
             margin-left: 300px;
             background-color: rgba(247, 238, 231, 0.47);
         }
-        
+
         header {
             background-color: #F7EEE7;
             padding: 20px;
@@ -239,7 +234,7 @@ foreach ($messages as $index => $message) {
 #sendButton:hover {
     background-color: #ff9800;
 }
-        
+
 #message-list {
     padding: 20px;
     background: white;
@@ -330,8 +325,8 @@ foreach ($messages as $index => $message) {
     if (file_exists($xmlFile)) {
         $xml = simplexml_load_file($xmlFile);
         $hasMessages = false;
-        
-        
+
+
         foreach ($xml->letter as $letter) {
         $to = (string) $letter->to;
         $from = (string) $letter->from;
@@ -345,10 +340,10 @@ foreach ($messages as $index => $message) {
             echo '<p><strong>From:</strong> ' . $letter->from . '</p>';
             echo '<p><strong>Subject:</strong> ' . $letter->subject . '</p>';
             $formattedMessage = htmlspecialchars($letter->message);
-            echo '<button class="viewButton" 
-                data-to="' . htmlspecialchars($letter->to) . '" 
-                data-from="' . htmlspecialchars($letter->from) . '" 
-                data-subject="' . htmlspecialchars($letter->subject) . '" 
+            echo '<button class="viewButton"
+                data-to="' . htmlspecialchars($letter->to) . '"
+                data-from="' . htmlspecialchars($letter->from) . '"
+                data-subject="' . htmlspecialchars($letter->subject) . '"
                 data-message="' . $formattedMessage . '">View</button>';
             echo '<button class="deleteButton" onclick="deleteMessage(\'' . addslashes($letter->subject) . '\')">Delete</button>';
             echo '</div>';
@@ -398,7 +393,7 @@ foreach ($messages as $index => $message) {
         <div id="editor-container"></div>
         <button id="sendButton" style="margin-top: 10px;">Send</button>
     </div>
-    
+
 <div id="messagePopup" class="popup">
     <div class="popup-content">
         <span id="closePopup" class="close-btn">&times;</span>
@@ -534,7 +529,7 @@ function deleteMessage(subject) {
             method: "POST",
             body: formData
         })
-        .then(response => response.json()) 
+        .then(response => response.json())
         .then(data => {
             console.log("Server response:", data);  // Debugging
             alert(data.message);  // Show success or error message
@@ -569,8 +564,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (event.target === editorSection) {
             editorSection.style.display = "none";
         }
-        
-        
+
+
     });
 });
 
