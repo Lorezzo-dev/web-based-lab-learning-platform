@@ -332,7 +332,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["action"]) && $_POST["
         $from = (string) $letter->from;
 
         // Display only messages where the user is the sender or recipient
-        if ($to === $username || $from === $username) {
+        if (stripos($to, $username) !== false || stripos($from, $username) !== false){
             $hasMessages = true;
 
             echo '<div class="message-panel">';
