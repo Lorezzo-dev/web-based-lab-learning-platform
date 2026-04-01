@@ -1,127 +1,98 @@
-## +++Web-Based Lab Learning Platform+++
+# Web-Based Lab Learning Platform
 
-## Academic Context:
+A full-stack educational platform designed to simulate laboratory activities through interactive modules, automated evaluation, and real-time progress tracking.
 
-This project was developed as part of the thesis:
+This system was developed and deployed as part of a published IEEE research study evaluating gamified web-based laboratory learning in a real classroom environment.
+
+---
+
+## 🧠 Research Context
+
+This platform was used in a study published under :contentReference[oaicite:0]{index=0}:
 
 "Science Education in Public Upper Secondary Schools: Utilizing the Web-Based Lab as an Interactive Learning Tool"
 
-It served as the primary system used in an experimental study comparing gamified web-based laboratory learning with traditional laboratory instruction in a real classroom setting.
+🔗 https://ieeexplore.ieee.org/abstract/document/11380788
 
-## Published Research:
-https://ieeexplore.ieee.org/abstract/document/11380788
+The system was utilized with real student participants to compare digital laboratory simulations with traditional laboratory instruction, measuring engagement, performance, and learning outcomes.
 
+---
 
-The study involved actual student participants and evaluated the impact of interactive digital lab activities on student engagement, performance, and learning outcomes.
+## 🧠 My Contribution
 
-## Project Contribution:
-Developed approximately 95% of the system
-Designed and implemented core interactive lab modules (drag-and-drop, simulations, quizzes)
-Built backend logic for grading, scoring, and progress tracking
-Designed and structured the relational database for experimental data collection
-Integrated frontend interactions with backend evaluation for consistent user experience
+- Led development of ~95% of the system
+- Designed and implemented interactive lab modules (drag-and-drop, simulations, quizzes)
+- Built backend logic for grading, scoring, and progress tracking
+- Designed relational database for experimental data collection
+- Integrated frontend interactions with backend evaluation systems
 
-## Overview:
+---
 
-This project is a research-backed web-based educational platform designed to support and evaluate gamified laboratory learning.
+## ⚡ Core Features
 
-It provides multiple interactive biology modules that simulate laboratory activities while tracking user performance and progress across different learning components.
+### 🎮 Interactive Lab Simulations
+- Phylogenetic Tree (drag-and-drop classification)
+- Frog Dissection (interactive identification)
+- Punnett Square (genetics simulation)
+- Timeline Quiz (multi-step quiz system)
 
-## Features:
-🎮 Interactive Lab Simulations
+### 📊 Automated Evaluation System
+- Module-based grading (labs + quizzes)
+- Real-time scoring and performance tracking
+- Structured recording of student results
 
-Phylogenetic Tree (drag-and-drop classification)
+### 📈 Progress Tracking
+- Tracks completion across modules and activities
+- Stores individual performance data per user
 
-Frog Dissection (interactive identification)
+### 🧑‍🏫 Instructor / Admin Tools
+- Create and manage lectures
+- Create and edit quizzes
+- Monitor student performance and engagement
 
-Punnett Square (genetics simulation)
+### 👤 Role-Based Access
+- Student
+- Teacher / Advisor
+- Admin
 
-Timeline Quiz (multi-step quiz system)
+---
 
-📊 Automated Grading System
+## 🏗️ System Architecture
 
-Module-based scoring (lab and quiz components)
+- Backend: PHP-based application logic
+- Database: MySQL (users, grades, progress tracking)
+- Frontend: HTML, CSS, JavaScript
+- Data Handling: XML for dynamic content (e.g., announcements)
 
-Performance recording per user
+---
 
-📈 Progress Tracking System
+## ⚙️ Setup (Local Development)
 
-Tracks completion of modules, labs, and quizzes
+1. Install XAMPP or similar PHP/MySQL environment  
+2. Place project in `htdocs/`  
+3. Start Apache and MySQL  
+4. Import database via phpMyAdmin (`thesislab.sql`)  
+5. Run:
+   http://localhost/your-folder/login.php  
 
-🧑‍🏫 Instructor / Advisor Features
+---
 
-Create and manage lectures
+## ⚠️ Notes
 
-Create and edit quizzes
+- Originally deployed in a controlled environment for research experimentation
+- Some UI elements may vary slightly across environments (local vs hosted)
+- Core functionality remains unaffected
 
-Monitor student performance and progress
+---
 
-👤 User Roles
+## 🔐 Data & Privacy
 
-Student (0)
+- Database included is fully sanitized  
+- No real student or experimental data is included  
+- All sensitive information has been removed for compliance  
 
-Teacher/Advisor (1)
+---
 
-Admin (2)
+## 📸 Screenshots
 
-💾 Database & Data Handling
-
-MySQL for structured data (users, grades, progress)
-
-XML used for storing and managing dynamic content (e.g., announcements)
-
-## Tech Stack:
-PHP
-
-MySQL
-
-XML
-
-JavaScript
-
-HTML/CSS
-
-
-## Setup Instructions:
-Install XAMPP (or similar local server environment)
-
-Place the project folder inside:
-
-htdocs/
-
-Start Apache and MySQL
-
-Import the database:
-
-Open phpMyAdmin
-
-Create a database (e.g. thesislab)
-
-Import thesislab.sql
-
-Open in browser:
-
-http://localhost/your-folder/login.php
-
-## Usage Notes:
-
-Users should register accounts through the system interface
-User roles can be adjusted via:
-
-Database (users.role)
-
-Admin panel (if enabled)
-
-
-## Notes on Implementation:
-
-This system was originally deployed in a hosted environment and optimized for a fixed display setup during thesis presentation and controlled experimentation.
-
-As a result, some UI elements may appear slightly misaligned when run in different local environments (e.g., XAMPP vs hosting platforms).
-
-These differences do not affect core functionality or system behavior.
-
-Disclaimer:
-
-This repository contains a sanitized database structure only.
-All personal data, including student information and experimental records, has been removed to ensure privacy and compliance.
+*(Add 4–6 screenshots here: modules, dashboard, admin panel, quiz, etc.)*
