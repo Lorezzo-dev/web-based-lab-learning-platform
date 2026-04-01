@@ -118,7 +118,7 @@ A built-in CMS enabling instructors to dynamically create and manage learning co
 
 1. Install XAMPP (or similar PHP/MySQL environment)  
 2. Place project folder 
-   htdocs/your-project-folder
+   `htdocs/your-project-folder`
 3. Start Apache and MySQL  
 4. Import database via phpMyAdmin:
 
