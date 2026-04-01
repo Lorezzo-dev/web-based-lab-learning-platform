@@ -159,6 +159,7 @@ A built-in CMS enabling instructors to dynamically create and manage learning co
 6. Student Dashboard
 <img width="1920" height="1080" alt="StudentDashboard" src="https://github.com/user-attachments/assets/9c4a6468-aa64-48e6-a1e9-7db9c4376ed1" />
 > Demonstrates real-time grading logic, including partial completion, failed modules, and automated final grade computation.
+ <br/>
 7. Teacher Dashboard
 <img width="1920" height="1080" alt="TeacherDashboard" src="https://github.com/user-attachments/assets/533ac72e-ecec-467d-8b51-6d9e3762cfd1" />
 
